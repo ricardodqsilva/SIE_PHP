@@ -21,24 +21,24 @@
         $searchWords = $_GET['search'];
     }
 
-    // Gets previous clarinet brands selected
+    // Gets previous boots brands selected
     $brandsSelected = [];
 	if(isset($_GET['brandsArray'])){
 		$brandsSelected = $_GET['brandsArray'];
     }
-    // Gets all clarinet brands available in the store
-    $clarinetBrands = getAllClarinetBrands();
+    // Gets all boots brands available in the store
+    $bootsBrands = getAllBootsBrands();
     
-    // Gets previous clarinet types selected
+    // Gets previous boots types selected
     $typesSelected = [];
 	if(isset($_GET['typesArray'])){
 		$typesSelected = $_GET['typesArray'];
     }
-    // Gets all clarinet types available in the store
-    $clarinetTypes = getAllClarinetTypes();
+    // Gets all boots types available in the store
+    $bootsTypes = getAllBootsTypes();
 
     // Execute query to obtain search results
-    $clarinetsSearched = getSearchedClarinets($searchWords, $typesSelected, $brandsSelected);
+    $bootsSearched = getSearchedBoots($searchWords, $typesSelected, $brandsSelected);
 ?>
 
 <!------------------------------------------------------->

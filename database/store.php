@@ -6,7 +6,7 @@
         return $result;
     }
     
-    function getAllClarinetBrands(){
+    function getAllBootsBrands(){
         global $conn;
         $query = "select distinct product_brand from chuteiras order by product_brand;";
         $result = pg_exec($conn, $query);
