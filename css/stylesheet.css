@@ -1,0 +1,934 @@
+body {
+    background-color: rgb(227, 229, 227);
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+}
+
+/*****************/
+/***** INDEX *****/
+/*****************/
+img.author_photo {
+    width: 256px;
+    height: 320px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(111, 112, 111);
+    position: absolute;
+}
+
+div.author_description {
+    width: 650px;
+    height: 270px;          /* Original height: 326px */
+    position: absolute;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+div.author_description p {
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    /* The following parameters will influence in vertical alignment */
+    font-size: 28px;
+    line-height: 30px;
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+}
+
+div.author_description a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+#website_description {
+    width: 928px;
+    height: 252px;          /* Original height: 352px */
+    position: absolute;
+    left: 976px;
+    top: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#website_description p {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    /* The following parameters will influence in vertical alignment */
+    font-size: 32px;
+    line-height: 36px;
+    margin-block-start: 36px;
+    margin-block-end: 36px;
+}
+
+#specifications {
+    width: 928px;
+    height: 150px;          /* Original height: 176px */
+    position: absolute;
+    left: 976px;
+    top: 400px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+#specifications p {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    /* The following parameters will influence in vertical alignment */
+    font-size: 28px;
+    line-height: 30px;
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+}
+
+#users_credentials {
+    width: 464px;
+    height: 150px;          /* Original height: 176px */
+    position: absolute;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+#users_credentials p {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    /* The following parameters will influence in vertical alignment */
+    font-size: 28px;
+    line-height: 30px;
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+}
+
+#button_gotostore {
+    background-color: rgb(111, 112, 111);
+    width: 640px;
+    height: 69px;
+    position: absolute;
+    top: 818px;
+    left: 640px;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: white;
+    font-size: 32px;
+    line-height: 69px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#button_gotostore:hover {
+    background-color: rgb(227, 229, 227);
+    width: 630px;
+    height: 59px;
+    color: rgb(111, 112, 111);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(111, 112, 111);
+    line-height: 59px;
+}
+
+/******************/
+/***** FOOTER *****/
+/******************/
+div.footerdivision {
+    background-color: rgb(111, 112, 111);
+    position: absolute;
+    top: 873px;
+    left:0;
+    width:100%;
+    height: 64px;
+}
+
+div.footerdivision p {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: white;
+    /* The following parameters will influence in vertical alignment */
+    font-size: 15px;
+    line-height: 17px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+/******************/
+/***** HEADER *****/
+/******************/
+.topnav {
+    background-color: rgb(111, 112, 111);
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 64px;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: white;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: left;
+    border-spacing: 0px;
+}
+
+.topnav a {
+    display: block;
+    color: inherit;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    text-decoration: none;
+}
+
+.topnav div {
+    float: left;
+    background-color: inherit;
+    height: 64px;
+    width: fit-content;
+    color: inherit;
+}
+
+.topnav div:hover {
+    background-color: white;
+    color: rgb(111, 112, 111);
+}
+
+div.active {
+    background-color: white;
+    color: rgb(111, 112, 111);
+}
+
+a.a_shoppct {
+    display: block;
+    color: inherit;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+
+img.shoppct_active {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 40px;
+    width: 40px;
+    filter: brightness(0) invert(0.49);
+}
+
+img.shoppct {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 40px;
+    width: 40px;
+}
+
+img.shoppct:hover {
+    filter: brightness(0) invert(0.49);
+}
+
+div.userhello {
+    float: right;
+    background-color: inherit;
+    height: 24px;
+    width: fit-content;
+    color: inherit;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+div.userhello:hover {
+    background-color: rgb(111, 112, 111);
+    color: white;
+}
+
+/*****************/
+/***** STORE *****/
+/*****************/
+/********** search bar **********/
+div.div_search_bar {
+    display: inline-block;
+    position: absolute;
+    top: 88px;
+    left: 42px;
+}
+  
+div.div_search_bar:after {
+    content: "";
+    background: rgb(111, 112, 111);
+    width: 3px;
+    height: 12px;
+    position: absolute;
+    top: 25px;
+    right: 2px;
+    transform: rotate(135deg);
+}
+
+input.search_bar {
+    color: rgb(111, 112, 111);
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    font-size: 15px;
+    background: white;
+    width: 6px;
+    height: 6px;
+    padding: 10px;
+    border: solid 3px rgb(111, 112, 111);
+    outline: none;
+    border-radius: 18px;
+    transition: width 0.5s;
+}
+
+input.search_bar::placeholder {
+    color: rgb(111, 112, 111);
+    opacity: 1;
+}
+  
+input.search_bar::-ms-placeholder {
+    color: rgb(111, 112, 111);
+}
+  
+input.search_bar::-ms-input-placeholder {
+    color: rgb(111, 112, 111);
+}
+  
+input.search_bar:focus,
+input.search_bar:valid {
+    width: 340px;
+}
+
+/********** filters **********/
+#filter_title {
+    background-color: rgb(111, 112, 111);
+    position: absolute;
+    top: 144px;
+    left: 40px;
+    width: 370px;
+    height: 24px;   /* Original height: 40px */
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    vertical-align: center;
+    border-spacing: 0px;
+}
+
+#filter_camps {
+    background-color: rgb(164, 165, 164);
+    position: absolute;
+    top: 184px;
+    left: 40px;
+    width: 350px;   /* Original width: 370px */
+    min-height: 100px;
+    max-height: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+    border-spacing: 0px;
+}
+
+#filter_camps p {
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
+}
+
+#filter_ok {
+    float: right;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    margin:5px;
+    transition: text-shadow 0.3s ease;
+    background: rgb(111, 112, 111);
+}
+
+#filter_ok:active {
+    position: relative;
+    top: 1px;
+}
+
+/********** results **********/
+#results_box {
+    background-color: white;
+    position: absolute;
+    top: 144px;
+    left: 430px;
+    width: 1450px;   /* Original width: 1450px */
+    min-height: 140px;
+    max-height: 709px;  /* 769px @ top=104px */
+	overflow-y: auto;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    text-align: left;
+    border-spacing: 0px;
+}
+
+#results_box::-webkit-scrollbar
+{
+	display: none;
+}
+
+div.product_separation { /*line that seperates different products*/
+    background-color: rgb(111, 112, 111);
+    position: relative;
+    left: 20px;
+    width: 1410px;
+    height: 2px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+div.product_descrip {    /*division that contains all divisions related to product*/
+    background-color: inherit;
+    position: relative;
+    left: 20px;
+    width: 1410px;
+    height: 100px;
+}
+
+div.product_imag_div {  /*division to put the product's image*/
+    background-color: inherit;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+}
+
+div.product_imag_div img {  /*css for product's image*/
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div.product_info {      /*put here the product general information*/
+    background-color: inherit;
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    width: 1000px;
+    height: 60px;
+}
+div.product_info h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0.5em;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+div.product_info h2 {
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: black;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+    font-weight: normal;
+}
+
+div.product_price {     /*put here the product price*/
+    background-color: inherit;
+    position: absolute;
+    left: 1170px;
+    top: 0px;
+    width: 240px;
+    height: 60px;
+}
+div.product_price h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0.5em;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+div.product_interact {  /*place the buttons in this division*/
+    background-color: inherit;
+    position: absolute;
+    left: 160px;
+    top: 60px;
+    width: 1250px;
+    height: 40px;
+}
+
+.button_products {
+    float: right;
+    background: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(111, 112, 111);
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 6px 20px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.button_products:active {
+    position: relative;
+    top: 1px;
+}
+
+/******************** UPDATE QUANTITIES (admin) ********************/
+
+.button_updateQuant {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(111, 112, 111);
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.button_updateQuant:active {
+    position: relative;
+    top: 1px;
+}
+
+/********************/
+/***** CONTACTS *****/
+/********************/
+
+.flip-card {
+    background-color: transparent;
+    width: 450px;
+    height: 450px;
+    perspective: 1000px;
+    margin-top: 225px;
+    margin-left: 340px;  
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: rgb(111, 112, 111);
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: rgb(111, 112, 111);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 90px;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back a{
+    text-decoration: none;
+    color: white;
+}
+
+/******************/
+/***** REPORT *****/
+/******************/
+.img_css {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 300px;
+    left: 500px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.img_css:hover {
+    opacity : 0.8;
+    filter : alpha(opacity=80);
+}
+
+.img_zip {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 300px;
+    left: 850px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.img_zip:hover {
+    opacity : 0.8;
+    filter : alpha(opacity=80);
+}
+
+.img_ppt {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 300px;
+    left: 1200px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.img_ppt:hover {
+    opacity : 0.8;
+    filter : alpha(opacity=80);
+}
+
+
+/*****************/
+/***** LOGIN *****/
+/*****************/
+div.loginDiv {
+    height: 100px;
+    width: 506px;
+    position: absolute;
+}
+
+div.loginDiv p {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    margin-block-start: 31px;
+    margin-block-end: 5px;
+    margin-left: 43px;
+}
+
+#loginDivErrors {
+    height: 40px;
+    width: 958px;
+    position: absolute;
+    left: 0px;
+    top: 634px;
+}
+
+#loginDivErrors p {
+    text-align: right;
+    vertical-align: middle;
+    color: red;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    margin-block-start: 14px;
+    margin-block-end: 14px;
+    margin-left: 43px;
+    margin-right: 43px;
+}
+
+#registerDivErrors {
+    height: 40px;
+    width: 958px;
+    position: absolute;
+    left: 962px;
+    top: 634px;
+}
+
+#registerDivErrors p {
+    text-align: left;
+    vertical-align: middle;
+    color: red;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    margin-block-start: 14px;
+    margin-block-end: 14px;
+    margin-left: 43px;
+    margin-right: 43px;
+}
+
+.login_camps {
+    position: relative;
+    bottom: 0px;
+    width: 400px;
+    background: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(111, 112, 111);
+    border-radius: 5px;
+    color: rgb(111, 112, 111);
+    text-align: left;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.loginDivButton{
+    height: 50px;
+    width: 506px;
+    position: absolute;
+    left: 452px;
+    top: 674px;
+    text-align: center;
+}
+
+.registerDivButton{
+    height: 50px;
+    width: 506px;
+    position: absolute;
+    left: 962px;
+    top: 674px;
+    text-align: center;
+}
+
+.login_buttons {
+    position: relative;
+    border: none;
+    color: white;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 3px;
+    margin: auto;
+    transition: text-shadow 0.3s ease;
+    background: rgb(111, 112, 111);
+}
+
+.login_buttons:active {
+    position: relative;
+    top: 1px;
+}
+
+.login_separationBar {
+    top: 84px;
+    left: 958px;
+    width: 4px;
+    height: 769px;
+    position: absolute;
+    background-color: rgb(111, 112, 111);
+}
+
+/*********************/
+/***** SHOPPCART *****/
+/*********************/
+
+#payment_camps {
+    background-color: rgb(164, 165, 164);
+    position: absolute;
+    top: 184px;
+    left: 40px;
+    width: 350px;   /* Original width: 370px */
+    min-height: 100px;
+    max-height: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    border-spacing: 0px;
+}
+
+#button_buy {
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    margin:5px;
+    transition: text-shadow 0.3s ease;
+    background: rgb(111, 112, 111);
+}
+
+#button_buy:active {
+    position: relative;
+    top: 1px;
+}
+
+/*********************/
+/***** SHOPPCART *****/
+/*********************/
+div.order_descrip {    /*division that contains all divisions related to orders*/
+    background-color: inherit;
+    position: relative;
+    left: 20px;
+    width: 1410px;
+    height: auto;
+}
+
+div.order_descrip > h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0.5em;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+div.order_descrip > table {
+    margin-left: 40px;
+    width: 1370px;
+}
+
+.headerTable1 {
+    width: 80%;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: left;
+    font-weight: normal;
+    border-collapse: collapse;
+    border-style: none none solid none;
+    border-color: black;
+    border-width: 2px;
+    margin-top: 20px;
+}
+
+.headerTable2 {
+    width: 10%;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: left;
+    font-weight: normal;
+    border-collapse: collapse;
+    border-style: none none solid none;
+    border-color: black;
+    border-width: 2px;
+    margin-top: 20px;
+}
+
+.headerTable3 {
+    width: 10%;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: left;
+    font-weight: normal;
+    border-collapse: collapse;
+    border-style: none none solid none;
+    border-color: black;
+    border-width: 2px;
+    margin-top: 20px;
+}
+
+.column1 {
+    width: 80%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.column2 {
+    width: 10%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    font-weight: normal;
+}
+
+.column3 {
+    width: 10%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    font-weight: normal;
+}
+
+.footerTable1 {
+    width: 80%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    font-weight: normal;
+    border-collapse: collapse;
+    border-style: solid none none none;
+    border-color: black;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footerTable2 {
+    width: 10%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    font-weight: normal;
+    border-collapse: collapse;
+    border-style: solid none none none;
+    border-color: black;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footerTable3 {
+    width: 10%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    font-weight: normal;
+    border-collapse: collapse;
+    border-style: solid none none none;
+    border-color: black;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
