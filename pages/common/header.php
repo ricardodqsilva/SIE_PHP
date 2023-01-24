@@ -104,16 +104,16 @@
     <!-- CURRENT PAGE: shoppcart -->
 
     <?php if($_SESSION['page'] == "shoppcart" && (!$authenticated)){ ?>
-        <div class="active" style="float: right"><a class="a_shoppct" onclick="show_authenticationAlert()"><img class="shoppct_active" src="../images/shopping-cart_white_40x40.png"></a></div>
+        <div class="active" style="float: right"><a class="a_shoppct" onclick="show_authenticationAlert()"><img class="shoppct_active" src="../images/shopping_cart.png"></a></div>
     <?php } ?>
     <?php if($_SESSION['page'] == "shoppcart" && ($authenticated)){ ?>
-        <div class="active" style="float: right"><a class="a_shoppct" href="../pages/shoppcart.php"><img class="shoppct_active" src="../images/shopping-cart_white_40x40.png"></a></div>
+        <div class="active" style="float: right"><a class="a_shoppct" href="../pages/shoppcart.php"><img class="shoppct_active" src="../images/shopping_cart.png"></a></div>
     <?php } ?>
     <?php if(!($_SESSION['page'] == "shoppcart") && (!$authenticated)){ ?>
-        <div style="float: right"><a class="a_shoppct" onclick="show_authenticationAlert()"><img class="shoppct" src="../images/shopping-cart_white_40x40.png"></a></a></div>
+        <div style="float: right"><a class="a_shoppct" onclick="show_authenticationAlert()"><img class="shoppct" src="../images/shopping_cart.png"></a></a></div>
     <?php } ?>
     <?php if(!($_SESSION['page'] == "shoppcart") && ($authenticated)){ ?>
-        <div style="float: right"><a class="a_shoppct" href="../pages/shoppcart.php"><img class="shoppct" src="../images/shopping-cart_white_40x40.png"></a></a></div>
+        <div style="float: right"><a class="a_shoppct" href="../pages/shoppcart.php"><img class="shoppct" src="../images/shopping_cart.png"></a></a></div>
     <?php } ?>
 
     <!-- SHOW username OR user's complet name -->
