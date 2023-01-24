@@ -16,7 +16,7 @@
     function getSearchedBoots($search, $types, $brands){
         global $conn;
         // Get all boots saved in the web-platform
-        $query = "select * from clarinet where true and (";
+        $query = "select * from chuteiras where true and (";
         
         // Set up search filters
         if(!empty($types) && sizeof($types) > 0){   // Filters for boots types
