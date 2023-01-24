@@ -1,4 +1,5 @@
 <?php
+    session_save_path('C:\data');
     session_start();
     $_SESSION['page'] = "store"; //???
 
