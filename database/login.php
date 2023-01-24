@@ -7,7 +7,7 @@
         $result = pg_exec($conn, $query);
       
         // Get number of registers
-        $num_registers = pg_numrows($result);
+        $num_registers = pg_num_rows($result);
         
         // If NUM_REGISTERS isn't greater than 0, it means that user isn't register in the platform
         if ($num_registers > 0) {
@@ -42,7 +42,7 @@
         $result = pg_exec($conn, $query);
 
         // If query returns one or more results, returns FALSE <=> Username not exist is a FALSE afirmation
-        if(pg_numrows($result) > 0){
+        if(pg_num_rows($result) > 0){
             return 0;
         }
         // If query returns none results, returns TRUE <=> Username not exist is a TRUE afirmation

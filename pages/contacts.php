@@ -10,7 +10,7 @@
 <!---------------------------------------------->
 <!---- Info about the author Ricardo Silva ----->
 <!---------------------------------------------->
-<div  class="flip-card" style=" ">
+<div  class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front"><img src="../images/" alt="Author"></div>
     <div class="flip-card-back">
