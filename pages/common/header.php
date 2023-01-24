@@ -31,7 +31,7 @@
 <html lang="pt">
 
 <head>
-    <title>Loja de Clarinetes</title>
+    <title>Loja de Chuteiras</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
     <link href="https://fonts.google.com/?query=Trebuchet+MS">
