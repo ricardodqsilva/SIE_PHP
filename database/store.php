@@ -50,7 +50,7 @@
         if($separatedWords[0] != NULL){
             for($i=0; $i < sizeof($separatedWords);$i++){
                 $separatedWords[$i] = strtolower($separatedWords[$i]);
-                $query .= "and LOWER(product_name) LIKE '%" . $separatedWords[$i] . "%' ";
+                $query .= "and LOWER(product_name) LIKE '%" . $separatedWords[$i] . "%' "; //checkar isto
             }
         }
 

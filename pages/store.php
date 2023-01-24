@@ -49,10 +49,10 @@
     <form id="search_form" method="get" action="store.php">
         <p>Tipo:</p>
         <?php
-            // List all clarinet types available in the store
-            if(0 < pg_numrows($clarinetBrands)){
-                for($i=0; $i < pg_numrows($clarinetTypes); $i++){
-                    $row = pg_fetch_row($clarinetTypes, $i);
+            // List all boots types available in the store
+            if(0 < pg_num_rows($bootsBrands)){
+                for($i=0; $i < pg_num_rows($bootsTypes); $i++){
+                    $row = pg_fetch_row($bootsTypes, $i);
                     $checkboxElement = "<input type='checkbox' name='typesArray[]' value='".$row[0]."'";
                     // Guarantee the search past values remains visible
                     if(!empty($typesSelected)){
@@ -63,22 +63,22 @@
                         }
                     }
                     $checkboxElement .= ">";
-                    $checkboxElement .= "<label for='$row[0]'>"."Clarinete "."$row[0]</label><br>";
+                    $checkboxElement .= "<label for='$row[0]'>"."Chuteira "."$row[0]</label><br>";
                     echo $checkboxElement;
                 }
             }
-            // In case there are any clarinet types defined in the database
+            // In case there are any boots types defined in the database
             else{
-                echo "Não existe nenhum tipo de clarinetes definida na base de dados<br>";
+                echo "Não existe nenhum tipo de chuteiras definida na base de dados<br>";
             }
         ?>
 
         <p>Marca:</p>
         <?php
-            // List all clarinet brands available in the store
-            if(0 < pg_numrows($clarinetBrands)){
-                for($i=0; $i < pg_numrows($clarinetBrands); $i++){
-                    $row = pg_fetch_row($clarinetBrands, $i);
+            // List all boots brands available in the store
+            if(0 < pg_num_rows($bootsBrands)){
+                for($i=0; $i < pg_num_rows($bootsBrands); $i++){
+                    $row = pg_fetch_row($bootsBrands, $i);
                     $checkboxElement = "<input type='checkbox' name='brandsArray[]' value='".$row[0]."'";
                     // Guarantee the search past values remains visible
                     if(!empty($brandsSelected)){
@@ -93,13 +93,13 @@
                     echo $checkboxElement;
                 }
             }
-            // In case there are any clarinet brands defined in the database
+            // In case there are any boots brands defined in the database
             else{
-                echo "Não existe nenhuma marca de clarinetes definida na base de dados<br>";
+                echo "Não existe nenhuma marca de chuteiras definida na base de dados<br>";
             }
         ?>
 
-        <input type="hidden" name="search" value="<?php if(!empty($searchWords)){echo $searchWords;}?>" />
+        <input type="hidden" name="search" value="<?php if(!empty($searchWords)){echo $searchWords;}?>" /> 
         <p><input id="filter_ok" type="submit" value="Ok"></p>
     </form>
 </div>
@@ -120,8 +120,8 @@
 <!-------------------------------------------------------->
 <div id="results_box">
     <?php
-        if(pg_numrows($clarinetsSearched)>0){
-            $row = pg_fetch_assoc($clarinetsSearched);
+        if(pg_num_rows($bootsSearched)>0){
+            $row = pg_fetch_assoc($bootsSearched);
 
             while (isset($row['id_product'])){
                 echo "<div class=\"product_separation\">&nbsp</div> <!-- Rule in HTML -->";
@@ -208,7 +208,7 @@
                 echo "    </div>";
                 echo "</div>";
 
-                $row = pg_fetch_assoc($clarinetsSearched);
+                $row = pg_fetch_assoc($bootsSearched);
             }
             echo "<div class=\"product_separation\">&nbsp</div> <!-- Rule in HTML -->";
         }
