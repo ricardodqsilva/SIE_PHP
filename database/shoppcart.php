@@ -1,6 +1,6 @@
 <?php
 
-    function getSpecificChuteira($id_product){
+    function getSpecificBoots($id_product){
         global $conn;
         $query = "select * from chuteiras where id_product = '" . $id_product . "';";
         $result = pg_exec($conn, $query);
