@@ -21,6 +21,7 @@
     function addSpecificOrders($id_order){  
         global $conn;                                                                            
         $query = "insert into orders (id_order,date_ordered,username) VALUES ('" .$id_order. "', localtimestamp, '".$_SESSION['username']."');";
+        echo "DEBUG:". $query;
         $result = pg_exec($conn, $query);
         return $result;
     }

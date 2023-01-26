@@ -1,4 +1,5 @@
 <?php
+    session_save_path('C:\data');
     session_start();                            // Session start to get session variables of current version
     include('../includes/opendb.php');          // Open communication channel between server and database
     include_once("../database/orders.php");     // Include of PHP functions libraries related with ORDERS page
