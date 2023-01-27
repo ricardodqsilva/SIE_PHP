@@ -108,11 +108,11 @@
 <!---------------------------------------------------->
 <!-------------------- SEARCH BOX -------------------->
 <!---------------------------------------------------->
-<form action="store.php" method="get">
+<!--<form action="store.php" method="get">
     <div class="div_search_bar">
         <input class="search_bar" type="text" value="<?php if(!empty($searchWords)){echo $searchWords;}?>" name="search" placeholder="     Pesquise nome produto aqui . . ." required>
     </div>
-</form>
+</form>-->
 
 
 <!-------------------------------------------------------->

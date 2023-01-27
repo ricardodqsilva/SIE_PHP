@@ -34,6 +34,7 @@
     <title>Loja de Chuteiras</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.google.com/?query=Trebuchet+MS">
     <link rel="shortcut icon" href="../images/icons/icon_tabbar_favicon.ico" type="image/x-icon" />
     <script src="../js/main.js"></script>
@@ -81,6 +82,16 @@
     <?php if(!($_SESSION['page'] == "report")){ ?>
         <div><a href="../pages/report.php"><b>Relatório</b></a></div>
     <?php } ?>
+
+    <!-- CURRENT PAGE: search box -->
+
+    <?php if($_SESSION['page'] == "store"){ ?>
+    <form action="../pages/store.php" method="get">
+    <div class="div_search_bar nohover">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <input class="search_bar" type="text" value="<?php if(!empty($searchWords)){echo $searchWords;}?>" name="search" placeholder="Procurar...">
+    </div>
+    </form><?php } ?>
 
     <!-- CURRENT PAGE: login -->
 
