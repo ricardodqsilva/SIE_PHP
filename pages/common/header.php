@@ -68,10 +68,10 @@
     <!-- CURRENT PAGE: contacts -->
 
     <?php if($_SESSION['page'] == "contacts"){ ?>
-        <div class="active"><a href="../pages/contacts.php"><b>Contactos</b></a></div>
+        <div class="active"><a href="../pages/contacts.php"><b>Sobre Nós</b></a></div>
     <?php } ?>
     <?php if(!($_SESSION['page'] == "contacts")){ ?>
-        <div><a href="../pages/contacts.php"><b>Contactos</b></a></div>
+        <div><a href="../pages/contacts.php"><b>Sobre Nós</b></a></div>
     <?php } ?>
 
     <!-- CURRENT PAGE: report -->

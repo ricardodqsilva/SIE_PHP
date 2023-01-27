@@ -97,4 +97,15 @@
         $result = pg_exec($conn, $query);
 		return $result;
     }
+
+    function getProductDetails($id_product){
+        global $conn;
+
+        //explicar a query
+        $query = "select * from chuteiras where id_product='". $id_product."'";
+
+        // Execute query
+        $result = pg_exec($conn, $query);
+        return $result;
+    }
 ?>

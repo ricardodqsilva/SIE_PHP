@@ -7,29 +7,9 @@ body {
 /******************/
 /***** FOOTER *****/
 /******************/
-
-
-footer {
-    position: fixed;
-    bottom: 0px;
-    background-color: rgb(197, 90, 17);
-    width:100%;
-}
-
-footer p {
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
-    color: white;
-    /* The following parameters will influence in vertical alignment */
-    font-size: 15px;
-    line-height: 17px;
-    margin-block-start: 10px;
-    margin-block-end: 10px;
-}
-
 div.footerdivision {
     background-color: rgb(197, 90, 17);
-    position: fixed;
+    position: absolute;
     top: 905px;
     left:0;
     width:100%;
@@ -263,6 +243,7 @@ input.search_bar {
     left: 430px;
     width: 1450px;   /* Original width: 1450px */
     min-height: 140px;
+    max-height: 709px;  /* 769px @ top=104px */
 	overflow-y: auto;
     font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
     text-align: left;
@@ -823,3 +804,24 @@ div.order_descrip > table {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+
+
+
+.flex-container {
+    display: flex;
+    
+    margin-top: 144px;
+    flex-direction: row;
+  }
+  
+  .flex-container > div {
+    
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .flex-container > div > img {
+    width: 300px;
+  }

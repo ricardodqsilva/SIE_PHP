@@ -127,10 +127,10 @@
                 echo "<div class=\"product_separation\">&nbsp</div> <!-- Rule in HTML -->";
 
                 echo "<div class=\"product_descrip\">";
-                echo "    <div class=\"product_imag_div\"><img src=\"" . $row['image_path'] . "\"></div>";
+                echo "    <div class=\"product_imag_div\"><a style=\"text-decoration:none; color:inherit\" href=\"products.php?id_product=".$row['id_product']."\"><img src=\"" . $row['image_path'] . "\"></a></div>";
                 echo "    <div class=\"product_info\">";
-                echo "        <h1>" . $row['product_name'] . "</h1>";
-                echo "        <h2>" . $row['id_product'] . "</h2>";
+                echo "        <h1><a style=\"text-decoration:none; color:inherit\" href=\"products.php?id_product=".$row['id_product']."\">". $row['product_name'] ."</a></h1>";
+                echo "        <h2>ref. " . $row['id_product'] . "</h2>";
                 echo "    </div>";
                 echo "    <div class=\"product_price\">";
                 echo "        <h1>Preço: ". number_format($row['price'], 2, "," , "." ) . " €</h1>";

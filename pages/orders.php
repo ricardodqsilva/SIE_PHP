@@ -32,8 +32,8 @@
                 echo "            <th class=\"headerTable3\"><i><b>Preço / Unidade:</b></i></th>";
                 echo "        </tr>";
                 
-                $allProductsRelatOrder = getProductsAsociatedOrder($row['id_order']);
-                if(pg_num_rows($allProductsRelatOrder)>0){
+                //$allProductsRelatOrder = getProductsAsociatedOrder($row['id_order']);
+                /*if(pg_num_rows($allProductsRelatOrder)>0){
                     $row_eachOrder = pg_fetch_assoc($allProductsRelatOrder);
                     $totalPay = 0;
                     while(isset($row_eachOrder['id_ord'])){
@@ -53,7 +53,7 @@
                 }
                 else{
                     echo "ERRO - não foram encontrados os produtos associados a determinada ordem.";
-                }
+                }*/
 
                 echo "    </table>";
 
