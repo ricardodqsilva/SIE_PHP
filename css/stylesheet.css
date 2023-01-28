@@ -819,9 +819,16 @@ div.order_descrip > table {
     
     margin: 10px;
     padding: 20px;
-    font-size: 30px;
   }
 
   .flex-container > div > img {
-    width: 300px;
+    width: 600px;
+    mix-blend-mode: multiply;
+  }
+
+  .divider {
+    width: 2px;
+    margin: 6px 0;
+    background: #c55a11;
+    
   }
