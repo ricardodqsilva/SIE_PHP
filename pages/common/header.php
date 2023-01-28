@@ -97,10 +97,10 @@
 
     <?php if(!$_SESSION['authenticated']){ ?>    <!-- If NOT AUTHENTICATHED: show LOGIN -->
         <?php if($_SESSION['page'] == "login"){ ?>
-            <div class="active" style="float: right"><a href="../pages/login.php?<?php echo "previous_page=".$_SESSION['page']; ?>"><b>Login</b></a></div>
+            <div class="active" style="float: right"><a href="../pages/login.php?<?php echo "previous_page=".$_SESSION['page']; ?>"><b>Iniciar Sessão</b></a></div>
         <?php } ?>
         <?php if(!($_SESSION['page'] == "login")){ ?>
-            <div style="float: right"><a href="../pages/login.php?<?php echo "previous_page=".$_SESSION['page']; ?>"><b>Login</b></a></div>
+            <div style="float: right"><a href="../pages/login.php?<?php echo "previous_page=".$_SESSION['page']; ?>"><b>Iniciar Sessão</b></a></div>
         <?php } ?>
     <?php } ?>
     <?php if($_SESSION['authenticated']){ ?>     <!-- If AUTHENTICATHED: show LOGOUT -->

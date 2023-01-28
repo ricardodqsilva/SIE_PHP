@@ -8,7 +8,7 @@
 
     function getProductsAsociatedOrder($id_order){
         global $conn;
-        $query = "select * from order_product, chuteiras where id_prod = id_product and id_ord='".$id_order."';";
+        $query = "select * from order_product, chuteiras where order_product.id_product = chuteiras.id_product and id_order='".$id_order."';";
         $result = pg_exec($conn, $query);
         return $result;
     }

@@ -23,8 +23,12 @@
 
             // DEBUG - see admin permissions - Comment!!!
             //header('Location: ../pages/store.php?error='.$username['admin_perm']);<?php  echo "?previous_page=".$_GET['previous_page'];
-            if(isset($_GET['previous_page']))
+            if(isset($_GET['previous_page'])){
+                if($_GET['previous_page'] != str_starts_with($_GET['previous_page'], 'products')){
                 header('Location: ../pages/'.$_GET['previous_page'].'.php');
+                }
+                else header('Location: ../pages/'.$_GET['previous_page']);
+            }
             else
                 header('Location: ../pages/store.php');
         }

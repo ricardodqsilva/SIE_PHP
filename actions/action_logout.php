@@ -7,6 +7,10 @@
     // Go to the previous page
     if($previous_page == "orders")
         header('Location: ../pages/store.php');
-    else
-        header('Location: ../pages/'.$previous_page.'.php');
+    else{
+        if($previous_page != str_starts_with($previous_page, 'products')){
+            header('Location: ../pages/'.$previous_page.'.php');
+            }
+            else header('Location: ../pages/'.$previous_page);
+    }
 ?>
