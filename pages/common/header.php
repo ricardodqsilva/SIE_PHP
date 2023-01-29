@@ -77,10 +77,10 @@
     <!-- CURRENT PAGE: report -->
 
     <?php if($_SESSION['page'] == "report"){ ?>
-        <div class="active"><a href="../pages/report.php"><b>Relatório</b></a></div>
+        <div class="active"><a href="../pages/report.php"><b>Transferências</b></a></div>
     <?php } ?>
     <?php if(!($_SESSION['page'] == "report")){ ?>
-        <div><a href="../pages/report.php"><b>Relatório</b></a></div>
+        <div><a href="../pages/report.php"><b>Transferências</b></a></div>
     <?php } ?>
 
     <!-- CURRENT PAGE: search box -->
@@ -105,10 +105,10 @@
     <?php } ?>
     <?php if($_SESSION['authenticated']){ ?>     <!-- If AUTHENTICATHED: show LOGOUT -->
         <?php if($_SESSION['page'] == "login"){ ?>
-            <div class="active" style="float: right"><a href="../actions/action_logout.php"><b>Logout</b></a></div>
+            <div class="active" style="float: right"><a href="../actions/action_logout.php"><b>Encerrar Sessão</b></a></div>
         <?php } ?>
         <?php if(!($_SESSION['page'] == "login")){ ?>
-            <div style="float: right"><a href="../actions/action_logout.php"><b>Logout</b></a></div>
+            <div style="float: right"><a href="../actions/action_logout.php"><b>Encerrar Sessão</b></a></div>
         <?php } ?>
     <?php } ?>
 
