@@ -30,13 +30,13 @@
 <!------------------------------------------------>
  <div class="flip-card" style="float: right;margin-top: -450px; margin-right: 340px;">
   <div class="flip-card-inner">
-    <div class="flip-card-front" ><img src="../images/" alt="Author"></div> 
+    <div class="flip-card-front" ><img src="../images/jc.png" alt="Author"></div> 
     <div class="flip-card-back">
         João Casal
         <br>
         MEEC - Automação
         <br>
-        Número de Telemóvel: 999999999
+        Número de Telemóvel: 917966804
         <br>
         <a href="mailto:up201708986@fe.up.pt">up201806187@fe.up.pt</a>
     </div>
