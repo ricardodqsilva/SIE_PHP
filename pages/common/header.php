@@ -58,10 +58,10 @@
 
     <!-- CURRENT PAGE: orders -->
 
-    <?php if($admin_permissions){if($_SESSION['page'] == "orders"){ ?>
+    <?php if($admin_permissions){if($_SESSION['page'] == ("orders") OR $_SESSION['page'] == ("management_products")){ ?>
         <div class="active"><a href="../pages/orders.php"><b>Gestão</b></a></div>
     <?php } ?>
-    <?php if(!($_SESSION['page'] == "orders")){ ?>
+    <?php if(!($_SESSION['page'] == ("orders") OR $_SESSION['page'] == ("management_products"))){ ?>
         <div><a href="../pages/orders.php"><b>Gestão</b></a></div>
     <?php }} ?>
 

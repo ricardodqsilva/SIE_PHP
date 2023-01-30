@@ -83,8 +83,14 @@
     include('../includes/closedb.php');
 ?>
 
-<div id="filter_title"><b>Controlo de encomendas</b></div>
-<div id="payment_camps">
+
+<div class="flex-container-menu">
+    <div style="background-color:rgb(75,75,75); text-decoration:none"><a href="orders.php">Encomendas</a></div>
+    <div style="text-decoration:none;"><a href="management_products.php">Produtos</a></div>
+</div>
+
+<div id="filter_title" style="top: 294px"><b>Controlo de encomendas</b></div>
+<div id="payment_camps" style="top: 334px">
     <form id="search_form" method="get" action="../actions/action_removeAllOrders.php">
         <p><input id="button_buy" type="submit" value="Eliminar Histórico de Encomendas"></p>
     </form>
