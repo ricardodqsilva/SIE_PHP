@@ -5,26 +5,34 @@
     include_once("../database/store.php");      // Include of PHP functions libraries related with LOGIN page
     
     // If mandatory registration camps are defined, create a new register entry in database
-    if (isset($_POST["add_quantity"], $_POST["add_productprice"], $_POST["add_idproduct"], $_POST["add_productname"], $_POST["add_brand"], $_POST["add_producttype"], $_POST["add_picture"])) {
+    
         // Save website visitor informations
-        $idproduct = $_POST["add_idproduct"];
-        $name  = $_POST["add_productname"];
-        $price = $_POST["add_productprice"];
-        $brand  = $_POST["add_brand"];
-        $type = $_POST["add_producttype"];
-        $picture  = $_POST["add_picture"];
-        $quantity = $_POST["add_quantity"];
+        $add_idproduct = $_POST['add_idproduct'];
+        $add_productname  = $_POST['add_productname'];
+        $add_productprice = $_POST['add_productprice'];
+        $add_brand  = $_POST['add_brand'];
+        $add_producttype = $_POST['add_producttype'];
+        $add_quantity = $_POST['add_quantity'];
 
         // Verify if the optional camp ADDRESS was defined
-        if(isset($_POST["add_description"])){
-            $description = $_POST["add_description"];
-        }
-        else{
-            $address = NULL;
-        }
+        //if(isset($_POST['add_description'])){
+            $add_description = $_POST['add_description'];
+        //}
+        //else{
+        //    $address = NULL;
+        //}
+
+        $fileName = "";
+        $prefixo = '123_';
+		$fileName = $prefixo . $_FILES["file"]["name"];
+		$fileName = str_replace(' ', '', $fileName);//remover os espaços para evitar erros
+		$destino = '../images/products/' . $fileName; 
+		move_uploaded_file($_FILES["file"]["tmp_name"], $destino);
 
 
-        $result = registerProduct($idproduct, $name, $price, $description, $brand, $type, $picture, $quantity);
+
+        
+        $result = registerProduct($add_idproduct, $add_productname, $add_productprice, $add_description, $add_brand, $add_producttype, $fileName, $add_quantity);
         // Verify if username isn't already defined in database
         /*if((bool)(verifyUsernameNotExist($user)) == FALSE){
             // ERROR TYPE 3 - Username already exists in database
@@ -46,7 +54,6 @@
                 header('Location: ../pages/login.php?error_register=2');
             }
         }*/
-    }
     /*else{
         // ERROR TYPE 1 - Mandatory camps aren't all defined
         header('Location: ../pages/login.php?error_register=1');
@@ -57,3 +64,5 @@
 
 
 ?>
+
+    

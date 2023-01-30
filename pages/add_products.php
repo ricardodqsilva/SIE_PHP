@@ -11,7 +11,7 @@
 <?php    if($admin_permissions){
 ?>
 
-<form method="post" action="../actions/action_addProduct.php<?php if(isset($_GET['previous_page'])) echo "?previous_page=".$_GET['previous_page']; ?>">
+<form method="post" action="../actions/action_addProduct.php" enctype="multipart/form-data">
     <div class="loginDiv" style="left: 962px; top: 122px; height: 112px;">
         <p style="font-weight: normal;margin-block-start: 0px;margin-block-end: 0px;font-size: 12px;line-height: 12px;">(campos obrigatórios: *)</p>
         <p>Nome do Produto*:</p>
@@ -39,7 +39,7 @@
     </div>
     <div class="loginDiv" style="left: 962px; top: 734px">
         <p>Fotografia*:</p>
-        <input class="login_camps" type="file" name="add_picture" required/>
+        <input class="login_camps" type="file" name="file" id="file" required/>
     </div>
     <div class="loginDiv" style="left: 962px; top: 834px">
         <p>Disponibilidade*:</p>

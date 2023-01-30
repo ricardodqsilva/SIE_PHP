@@ -115,11 +115,12 @@
         // Formulate query with camps inserted by website visitor
         $query = "insert into chuteiras (id_product, product_name, price, product_brand, product_type, image_path, quantity_available";
         if($description != NULL){
-            $query .= ", description) values ('".$idproduct."', '".$name."', .$price., '".$brand."', '".$type."', '".$picture."', .$quantity., '".$description."');";
+            $query .= ", description) values ('".$idproduct."', '".$name."', $price, '".$brand."', '".$type."', '".$picture."', $quantity, '".$description."');";
         }
         else{
-            $query .= ") values ('".$idproduct."', '".$name."', '".$price."', '".$brand."', '".$type."', '".$picture."', '".$quantity."');";
+            $query .= ") values ('".$idproduct."', '".$name."', '".$price."', '".$brand."', '".$type."', '".$picture."', $quantity);";
         }
+        echo $query;
         $result = pg_exec($conn, $query);
         return $result;
     }
