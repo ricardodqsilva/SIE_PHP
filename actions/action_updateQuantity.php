@@ -19,5 +19,6 @@
         }
     }
 
-    header('Location: ../pages/store.php');     // Redirect to store
+    //header('Location: ../pages/store.php');     // Redirect to store
+    header('Location: ../pages/products_management.php?id_product=' .$_GET['product_id'].'');
 ?>

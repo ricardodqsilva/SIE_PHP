@@ -29,7 +29,7 @@
             while (isset($row['id_product'])){
 
 
-                echo "    <div><a style=\"text-decoration:none; color:inherit\" href=\"products.php?id_product=".$row['id_product']."\"><img class=\"results-container_img\"src=\"" . $row['image_path'] . "\"></a>";
+                echo "    <div><a style=\"text-decoration:none; color:inherit\" href=\"products_management.php?id_product=".$row['id_product']."\"><img class=\"results-container_img\"src=\"" . $row['image_path'] . "\"></a>";
                 ///echo "    <div>";
                 echo "<h4 style=\"width: 305.8px; height: 38px;\">" . $row['product_name'] . "</h4>";
                 echo         "<h3 style=\"width: 305.8px; margin-bottom: 3px;\">". number_format($row['price'], 2, "," , "." ) . " €";
@@ -72,7 +72,7 @@
                 if(!$authenticated){
                     //echo "    <button style=\"float:none; margin: 0px 0px 0px 20px\"class=\"button_products\" onclick=\"show_authenticationAlert()\">Adicionar ao Carrinho</button>";
 
-                    echo     "<form style=\"display:inline\"action=\"products.php\" method=\"get\">";
+                    echo     "<form style=\"display:inline\"action=\"products_management.php\" method=\"get\">";
                     echo         "<input type=\"hidden\" name=\"id_product\" value=\"" . $row['id_product'] . "\">";
                     echo         "<input style=\"float:none; margin: 0px 0px 0px 40px\"class=\"button_products\" type=\"submit\" value=\"Mais Detalhes\">";
                     echo     "</form>";
@@ -82,21 +82,21 @@
                     if ( $row['quantity_available'] > 0 ){
                         if(isset($_SESSION['cart']) && array_key_exists( $row['id_product'] , $_SESSION['cart'])){
                             if( $row['quantity_available'] - $_SESSION['cart'][$row['id_product']] > 0 ){
-                                echo "    <form style=\"display:inline\"action=\"products.php\" method=\"get\">";
+                                echo "    <form style=\"display:inline\"action=\"products_management.php\" method=\"get\">";
                                 echo "        <input type=\"hidden\" name=\"id_product\" value=\"" . $row['id_product'] . "\">";
                                 echo "        <input style=\"float:none; margin: 0px 0px 0px 40px\"class=\"button_products\" type=\"submit\" value=\"Mais Detalhes\">";
                                 echo "    </form>";
                             }
                             else{
                                 //echo "    <button style=\"float:none; margin: 0px 0px 0px 20px\"class=\"button_products\" onclick=\"show_unavailabilityAlert()\">Adicionar ao Carrinho</button>";
-                                echo     "<form style=\"display:inline\"action=\"products.php\" method=\"get\">";
+                                echo     "<form style=\"display:inline\"action=\"products_management.php\" method=\"get\">";
                                 echo         "<input type=\"hidden\" name=\"id_product\" value=\"" . $row['id_product'] . "\">";
                                 echo         "<input style=\"float:none; margin: 0px 0px 0px 40px\"class=\"button_products\" type=\"submit\" value=\"Mais Detalhes\">";
                                 echo     "</form>";
                             }
                         }
                         else{
-                            echo     "<form style=\"display:inline\"action=\"products.php\" method=\"get\">";
+                            echo     "<form style=\"display:inline\"action=\"products_management.php\" method=\"get\">";
                             echo         "<input type=\"hidden\" name=\"id_product\" value=\"" . $row['id_product'] . "\">";
                             echo         "<input style=\"float:none; margin: 0px 0px 0px 40px\"class=\"button_products\" type=\"submit\" value=\"Mais Detalhes\">";
                             echo     "</form>";
@@ -104,7 +104,7 @@
                     }
                     else{
                         //echo "    <button style=\"float:none; margin: 0px 0px 0px 20px\"class=\"button_products\" onclick=\"show_unavailabilityAlert()\">Adicionar ao Carrinho</button>";
-                        echo     "<form style=\"display:inline\"action=\"products.php\" method=\"get\">";
+                        echo     "<form style=\"display:inline\"action=\"products_management.php\" method=\"get\">";
                         echo         "<input type=\"hidden\" name=\"id_product\" value=\"" . $row['id_product'] . "\">";
                         echo         "<input style=\"float:none; margin: 0px 0px 0px 40px\"class=\"button_products\" type=\"submit\" value=\"Mais Detalhes\">";
                         echo     "</form>";
@@ -147,4 +147,8 @@
 <div class="flex-container-menu">
     <div style="text-decoration:none"><a href="orders.php">Encomendas</a></div>
     <div style="background-color:rgb(75,75,75); text-decoration:none;"><a href="management_products.php">Produtos</a></div>
+</div>
+
+<div class="flex-container-menu" style="top:264px">
+    <div style="text-decoration:none"><a href="add_products.php">Adicionar Produto</a></div>
 </div>
