@@ -31,26 +31,35 @@
     echo    "<div style=\"background-color: lightgrey; width: 300px; padding: 5px 50px 20px 50px; text-align: center\"><h3>" . $row['price'] . "€</h3>";
 
     if(!$authenticated){
-        echo "    <button style=\"margin-left: 0px; float:none\"class=\"button_products\" onclick=\"show_authenticationAlert()\">Inicie sessão para adicionar ao carrinho</button>";
-        echo "<p style=\"text-align: justify;\"><b>Disponibilidade: </b>" . $row['quantity_available'];
-        echo "<form action=\"/action_page.php\">";
-        echo    "<label for=\"cars\">1:</label>";
-        echo    "<select name=\"cars\" id=\"cars\">";
-        echo    "<option value=\"volvo\">1</option>";
-        echo    "<option value=\"saab\">Saab</option>";
-        echo    "<option value=\"opel\">Opel</option>";
-        echo    "<option value=\"audi\">Audi</option>";
+        echo "    <form action=\"../pages/login.php\" method=\"get\">";
+        echo "<select style=\"margin-left: 0px; float:none; padding: 4px 18px; font-weight: normal;border-width: 1px;\" class=\"button_products\">";
+        echo    "<option disabled selected value> Escolhe o teu tamanho </option>";
+        echo    "<option>40</option>";
+        echo    "<option>41</option>";
+        echo    "<option>42</option>";
+        echo    "<option>43</option>";
+        echo    "<option>44</option>";
         echo "</select>";
-        echo "</form>";
-        echo "</p>";
+        echo "        <input type=\"hidden\" name=\"previous_page\" value=\"" . $_SESSION['page'] . "\">";
+        echo "        <input style=\"margin-left: -25px; float:none; margin-top: 7.86px;\"class=\"button_products\" type=\"submit\" value=\"Inicie Sessão para adicionar ao carrinho\">";
+        echo "    </form>";
+        echo "<p style=\"text-align: justify;\"><b>Disponibilidade: </b>" . number_format($row['quantity_available'], 0). "</p>";
     }
     else{
         if ( $row['quantity_available'] > 0 ){
             if(isset($_SESSION['cart']) && array_key_exists( $row['id_product'] , $_SESSION['cart'])){
                 if( $row['quantity_available'] - $_SESSION['cart'][$row['id_product']] > 0 ){
                     echo "    <form action=\"../actions/action_updateShoppCart.php\" method=\"post\">";
+                    echo "<select style=\"margin-left: 0px; float:none; padding: 4px 18px; font-weight: normal;border-width: 1px;\" class=\"button_products\"required>";
+                    echo    "<option disabled selected value> Escolhe o teu tamanho </option>";
+                    echo    "<option>40</option>";
+                    echo    "<option>41</option>";
+                    echo    "<option>42</option>";
+                    echo    "<option>43</option>";
+                    echo    "<option>44</option>";
+                    echo "</select>";
                     echo "        <input type=\"hidden\" name=\"product_id_buy\" value=\"" . $row['id_product'] . "\">";
-                    echo "        <input style=\"margin-left: 0px; float:none\"class=\"button_products\" type=\"submit\" value=\"Adicionar ao Carrinho\">";
+                    echo "        <input style=\"margin-left: 0px; float:none; margin-top: 7.86px;\"class=\"button_products\" type=\"submit\" value=\"Adicionar ao Carrinho\">";
                     echo "    </form>";
                     echo "<p style=\"text-align: justify;\"><b>Disponibilidade: </b>" . number_format($row['quantity_available'] - $_SESSION['cart'][$row['id_product']], 0). "</p>"; 
                 }
@@ -61,10 +70,18 @@
             }
             else{
                 echo "    <form action=\"../actions/action_updateShoppCart.php\" method=\"post\">";
+                echo "<select style=\"margin-left: 0px; float:none; padding: 4px 18px; font-weight: normal;border-width: 1px;\" class=\"button_products\"required>";
+                echo    "<option disabled selected value> Escolhe o teu tamanho </option>";
+                echo    "<option>40</option>";
+                echo    "<option>41</option>";
+                echo    "<option>42</option>";
+                echo    "<option>43</option>";
+                echo    "<option>44</option>";
+                echo "</select>";
                 echo "        <input type=\"hidden\" name=\"product_id_buy\" value=\"" . $row['id_product'] . "\">";
-                echo "        <input style=\"margin-left: 0px; float:none\"class=\"button_products\" type=\"submit\" value=\"Adicionar ao Carrinho\">";
+                echo "        <input style=\"margin-left: 0px; float:none;margin-top: 7.86px;\"class=\"button_products\" type=\"submit\" value=\"Adicionar ao Carrinho\">";
                 echo "    </form>";
-                echo "<p style=\"text-align: justify;\"><b>Disponibilidade: </b>" . number_format($row['quantity_available'], 0). "</p>";
+                echo "<p><b>Disponibilidade: </b>" . number_format($row['quantity_available'], 0). "</p>";
             }
         }
         else{

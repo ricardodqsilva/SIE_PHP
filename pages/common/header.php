@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.google.com/?query=Trebuchet+MS">
-    <link rel="shortcut icon" href="../images/icons/icon_tabbar_favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../images/icons/football-boots.png" type="image/x-icon" />
     <script src="../js/main.js"></script>
 </head>
 
@@ -59,10 +59,10 @@
     <!-- CURRENT PAGE: orders -->
 
     <?php if($admin_permissions){if($_SESSION['page'] == "orders"){ ?>
-        <div class="active"><a href="../pages/orders.php"><b>Encomendas</b></a></div>
+        <div class="active"><a href="../pages/orders.php"><b>Gestão</b></a></div>
     <?php } ?>
     <?php if(!($_SESSION['page'] == "orders")){ ?>
-        <div><a href="../pages/orders.php"><b>Encomendas</b></a></div>
+        <div><a href="../pages/orders.php"><b>Gestão</b></a></div>
     <?php }} ?>
 
     <!-- CURRENT PAGE: contacts -->
