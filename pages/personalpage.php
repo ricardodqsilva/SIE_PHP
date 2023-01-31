@@ -40,7 +40,7 @@
 
 <div class="flex-container-menu">
     <div style="background-color:rgb(75,75,75); text-decoration:none"><a href="orders.php">Página Pessoal</a></div>
-    <div style="text-decoration:none;"><a href="management_products.php">Minhas Encomendas</a></div>
+    <div style="text-decoration:none;"><a href="orders_personalpage.php">Minhas Encomendas</a></div>
 </div>
 
 <?php
