@@ -899,3 +899,8 @@ div.order_descrip > table {
     width: 600px;
     mix-blend-mode: multiply;
   }
+
+  span {
+    font-size: 16px;
+    font-weight: normal;
+  }

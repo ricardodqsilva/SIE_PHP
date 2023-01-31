@@ -131,7 +131,7 @@
 
     <?php if($_SESSION['authenticated'])        /*** If AUTHENTICATHED: show username OR user's complet name ***/
         if(isset($_SESSION['name_user'])){
-            echo "<div class=\"userhello\" style=\"float: right\"><b>Olá, ". $_SESSION['name_user'] . "</b></div>";
+            echo "<a class=\"userhello\" style=\"padding-top:0px;\" href=\"../pages/personalpage.php?username=".$username."\"><div class=\"userhello\" style=\"float: right\">Olá, ". $_SESSION['name_user'] . "</div></a>";
         }
         else{
             echo "<div class=\"userhello\" style=\"float: right\"><b>Olá, ". $username . "</b></div>";

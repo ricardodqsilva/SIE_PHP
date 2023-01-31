@@ -8,5 +8,5 @@
 
     removeProduct($product);                    // Remove the specific product from store
     
-    header('Location: ../pages/store.php');     // Redirect to store
+    header('Location: ../pages/management_products.php');     // Redirect to store
 ?>

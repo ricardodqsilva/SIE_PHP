@@ -50,4 +50,15 @@
             return 1;
         }
     }
+
+    function getUserDetails($username){
+        global $conn;
+
+        //explicar a query
+        $query = "select * from users where username='". $username."'";
+
+        // Execute query
+        $result = pg_exec($conn, $query);
+        return $result;
+    }
 ?>
