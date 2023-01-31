@@ -900,7 +900,15 @@ div.order_descrip > table {
     mix-blend-mode: multiply;
   }
 
-  span {
+  .personalpage{
     font-size: 16px;
     font-weight: normal;
+  }
+
+  .red {
+    color: red;
+  }
+
+  .green {
+    color: green;
   }

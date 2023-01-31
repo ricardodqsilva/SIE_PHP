@@ -24,10 +24,10 @@
 
     if($authenticated){
         echo    "<h1 style=\"margin-top: 0px;\">Informações da Conta</h1>";
-        echo    "<h3><i>Nome de Utilizador: </i><span>" . $row['username']."</span></h3>";
-        echo    "<h3><i>Nome: </i><span>" . $row['name']."</span></h3>";
-        echo    "<h3><i>Morada: </i><span>" . $row['adress']."</span></h3>";
-        echo    "<h3><i>E-mail: </i><span>" . $row['email']."</span></h3>";
+        echo    "<h3><i>Nome de Utilizador: </i><span class=\"personalpage\">" . $row['username']."</span></h3>";
+        echo    "<h3><i>Nome: </i><span class=\"personalpage\">" . $row['name']."</span></h3>";
+        echo    "<h3><i>Morada: </i><span class=\"personalpage\">" . $row['adress']."</span></h3>";
+        echo    "<h3><i>E-mail: </i><span class=\"personalpage\">" . $row['email']."</span></h3>";
     }
     else echo "Não tem permissões para aceder a esta página.";
 

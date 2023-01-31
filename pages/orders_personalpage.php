@@ -24,7 +24,16 @@
 
                 // Display order
                 echo "<div class=\"order_descrip\">";
-                echo "    <h1>ID " . $row['id_order'] . ": efetuada em ". $row['date_ordered'] . "</h1>";
+
+                if(str_contains($row['id_order'], "waitingvalidation")){
+                    $id_order = explode("waitingvalidation", $row['id_order']);
+                    echo "    <h1>ID " . $id_order[0] . ": efetuada em ". $row['date_ordered'] . " <span class=\"red\">(Espera Envio)</span></h1>";
+                }
+    
+    
+                    else echo "    <h1>ID " . $row['id_order'] . ": efetuada em ". $row['date_ordered'] . " <span class=\"green\">(Enviado)</span></h1>";
+
+
                 echo "    <table>";
                 echo "        <tr>";
                 echo "            <th class=\"headerTable1\"><i><b>Nome do Produto:</b></i></th>";

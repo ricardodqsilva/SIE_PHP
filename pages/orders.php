@@ -24,7 +24,24 @@
 
                 // Display order
                 echo "<div class=\"order_descrip\">";
-                echo "    <h1>ID " . $row['id_order'] . ": efetuada por ". $row['username'] . " em ". $row['date_ordered'] . "</h1>";
+
+                if(str_contains($row['id_order'], "waitingvalidation")){
+                $id_order = explode("waitingvalidation", $row['id_order']);
+                echo "    <h1>ID " . $id_order[0] . ": efetuada por ". $row['username'] . " em ". $row['date_ordered'] . " <span class=\"red\">(Espera Envio)</span>";
+                
+                echo "    <form style=\"display: inline\"action=\"../actions/action_updateOrder.php\" method=\"post\">";
+                echo "        <input type=\"hidden\" name=\"id_order_update\" value=\"" . $row['id_order'] . "\">";
+                echo "        <input type=\"hidden\" name=\"date_ordered\" value=\"" . $row['date_ordered'] . "\">";
+                echo "        <input type=\"hidden\" name=\"username\" value=\"" . $row['username'] . "\">";
+                echo "        <input style=\"float:none;\"class=\"button_products\" type=\"submit\" value=\"Confirmar Envio\">";
+                echo "    </form>";
+
+                echo "</h1>";
+                }
+
+
+                else echo "    <h1>ID " . $row['id_order'] . ": efetuada por ". $row['username'] . " em ". $row['date_ordered'] . " <span class=\"green\">(Enviado)</span></h1>";
+
                 echo "    <table>";
                 echo "        <tr>";
                 echo "            <th class=\"headerTable1\"><i><b>Nome do Produto:</b></i></th>";
