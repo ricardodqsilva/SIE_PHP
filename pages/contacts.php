@@ -12,7 +12,7 @@
 <!---------------------------------------------->
 <div  class="flip-card">
   <div class="flip-card-inner">
-    <div class="flip-card-front"><img src="../images/" alt="Author"></div>
+    <div class="flip-card-front"><img style="width:450px; height: 450px;" src="../images/rs.jpeg" alt="Author"></div>
     <div class="flip-card-back">
         Ricardo Silva
         <br>
@@ -30,7 +30,7 @@
 <!------------------------------------------------>
  <div class="flip-card" style="float: right;margin-top: -450px; margin-right: 340px;">
   <div class="flip-card-inner">
-    <div class="flip-card-front" ><img src="../images/jc.png" alt="Author"></div> 
+    <div class="flip-card-front" ><img style="width:450px; height: 450px;"src="../images/jc.png" alt="Author"></div> 
     <div class="flip-card-back">
         João Casal
         <br>
