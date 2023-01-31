@@ -32,7 +32,7 @@
 
 
         
-        $result = registerProduct($add_idproduct, $add_productname, $add_productprice, $add_description, $add_brand, $add_producttype, $fileName, $add_quantity);
+        $result = registerProduct($add_idproduct, $add_productname, $add_productprice, $add_description, $add_brand, $add_producttype, $destino, $add_quantity);
         // Verify if username isn't already defined in database
         /*if((bool)(verifyUsernameNotExist($user)) == FALSE){
             // ERROR TYPE 3 - Username already exists in database
